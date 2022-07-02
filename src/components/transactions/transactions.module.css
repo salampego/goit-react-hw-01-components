@@ -1,0 +1,16 @@
+.transactioHistory{
+
+}
+th{
+    color:#fff;
+    border: 1px solid #fff;
+    background: #83C4D1;
+    font-size: 15px;
+    padding: 30px;
+}
+td{
+    background: #fff;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid black;
+}
