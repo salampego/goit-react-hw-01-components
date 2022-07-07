@@ -1,4 +1,5 @@
 import s from './transactions.module.css'
+import PropTypes from 'prop-types'
 
 export const TransactionHistory = ({ items }) => 
   (
@@ -13,7 +14,7 @@ export const TransactionHistory = ({ items }) =>
           <tbody>
         {items.map(({ id, type, amount, currency }) => 
   
-    <tr>
+          <tr key={id}>
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
@@ -21,3 +22,10 @@ export const TransactionHistory = ({ items }) =>
   )}</tbody>
         </table>
 )
+
+TransactionHistory.prototype = {
+  id: PropTypes.string,
+  type: PropTypes.string,
+  amount: PropTypes.string,
+  currency: PropTypes.string,
+}
